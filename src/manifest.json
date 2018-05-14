@@ -1,0 +1,23 @@
+﻿{
+  "manifest_version": 2,
+
+  "name": "Email crawler Extension",
+  "description": "",
+  "version": "1.0",
+
+  "browser_action": {
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+	"fileSystem",
+    "syncFileSystem"
+  ],
+  "content_scripts": [
+    {
+      "matches": [ "https://clutch.co/*" ]
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "web_accessible_resources": [ "page.js"]
+}
